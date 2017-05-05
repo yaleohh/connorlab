@@ -79,7 +79,7 @@ p {
   .sub-div {
     width: 80%; } }
 header {
-  height: 100px;
+  height: 90px;
   width: 100%;
   position: fixed;
   text-align: left;
@@ -94,7 +94,7 @@ header {
     margin: 0;
     padding: 0;
     position: absolute;
-    top: 100px;
+    top: 90px;
     width: 100%;
     height: 100vh; }
     header .mobile-header-nav li a {
@@ -130,7 +130,8 @@ header {
         transform-origin: 8px; }
 
 #intro-div {
-  height: 80vh; }
+  height: 80vh;
+  padding-bottom: 50px; }
   #intro-div img {
     width: 200px; }
   #intro-div h1 {
@@ -183,16 +184,18 @@ header {
   padding: 50px 100px;
   background: #febad2;
   border-radius: 15px;
-  margin-bottom: 100px; }
+  margin-bottom: 0; }
 @media only screen and (max-width: 1000px) {
   #explore-div #challenge-div {
     width: 80%;
     padding: 5% 0; }
     #explore-div #challenge-div .challenge-section {
       width: 80%; } }
+#explore-div #dohad-div h2 {
+  text-transform: none; }
 
 #investigate-div {
-  padding-top: 0; }
+  padding-top: 100px; }
   #investigate-div #research-div {
     text-align: left; }
     #investigate-div #research-div .research-section {
@@ -218,7 +221,8 @@ header {
         margin-right: 0; } }
 
 #participate-div {
-  text-align: left; }
+  text-align: left;
+  padding-top: 100px; }
   #participate-div h3 {
     margin-bottom: 0;
     text-align: center; }
@@ -245,16 +249,28 @@ header {
 @media only screen and (max-width: 1000px) {
   #participate-div {
     text-align: center; }
+    #participate-div h3 {
+      padding-bottom: 50px; }
     #participate-div .research-section .research-text {
       width: 80%;
       margin: 25px; }
     #participate-div .research-section img {
       margin-right: 0; } }
-#support-sub {
-  padding: 0 0 100px; }
+#support-div {
+  padding-top: 100px; }
+  #support-div #support-sub {
+    padding: 0 0 100px; }
 
 #contact-div {
   background: #3D4044; }
+  #contact-div #contact-copyright {
+    margin-bottom: 50px; }
+    #contact-div #contact-copyright #copyright-text {
+      font-size: 14px; }
+    #contact-div #contact-copyright #copyright-yaleohh {
+      color: #febad2; }
+      #contact-div #contact-copyright #copyright-yaleohh:hover {
+        cursor: pointer; }
   #contact-div h1 {
     color: white; }
   #contact-div h3 {
@@ -264,21 +280,26 @@ header {
   #contact-div a {
     color: white; }
   #contact-div img {
-    width: 20px; }
+    width: 20px;
+    height: 15px; }
   #contact-div #contact-main-div {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
     margin: 50px; }
     #contact-div #contact-main-div a {
-      margin: 0 25px; }
-  @media only screen and (max-width: 1000px) {
-    #contact-div #contact-main-div {
-      flex-direction: column; } }
+      margin-bottom: 25px; }
+    #contact-div #contact-main-div img {
+      margin-bottom: 25px; }
   #contact-div .references-section {
     text-align: left; }
+    #contact-div .references-section p {
+      font-size: 5px;
+      letter-spacing: 1px;
+      font-weight: 100; }
     #contact-div .references-section #references-text {
       text-align: left;
-      font-size: 10px;
+      font-size: 5px;
       letter-spacing: 1px;
       font-weight: 100;
       word-break: break-all; }
