@@ -1,0 +1,288 @@
+body {
+  font-family: "Open Sans", Helvetica, sans-serif;
+  color: black;
+  font-weight: 300;
+  font-size: 14px;
+  letter-spacing: 5px;
+  text-align: center;
+  min-width: 450px;
+  margin: 0; }
+
+h1 {
+  font-family: "Open Sans", Helvetica, sans-serif;
+  font-size: 35px;
+  letter-spacing: 15px;
+  font-weight: bold;
+  color: #3D4044;
+  text-transform: uppercase;
+  margin: 0 0 25px; }
+
+h2 {
+  margin: 0 0 25px;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  font-size: 25px;
+  letter-spacing: 5px;
+  font-weight: bold;
+  color: #3D4044;
+  text-transform: uppercase; }
+
+h3 {
+  letter-spacing: 5px;
+  font-size: 18px;
+  font-weight: 300;
+  margin-top: 0;
+  color: #3D4044;
+  width: 900px; }
+
+@media only screen and (max-width: 1000px) {
+  h3 {
+    width: 80%; } }
+h4 {
+  letter-spacing: 3px;
+  font-size: 14px;
+  margin-top: 0;
+  color: #3D4044;
+  text-transform: uppercase;
+  font-weight: bold; }
+
+a {
+  color: #3D4044;
+  display: inline-block;
+  text-decoration: none; }
+
+a:hover {
+  color: #febad2; }
+
+p {
+  letter-spacing: 3px;
+  font-size: 14px;
+  margin-top: 0;
+  color: #3D4044; }
+
+.main-div {
+  min-width: 300px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  padding: 100px 0 0; }
+
+.sub-div {
+  min-width: 300px;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  padding: 50px 0 0;
+  width: 900px; }
+
+@media only screen and (max-width: 1000px) {
+  .sub-div {
+    width: 80%; } }
+header {
+  height: 100px;
+  width: 100%;
+  position: fixed;
+  text-align: left;
+  background: white; }
+  @media (min-width: 768px) {
+    header .mobile-nav-wrap {
+      /* display: none; */ } }
+  header .mobile-header-nav {
+    background-color: white;
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    height: 100vh; }
+    header .mobile-header-nav li a {
+      color: black;
+      display: block;
+      padding: 25px 0;
+      text-align: center;
+      text-decoration: none;
+      transition: all 0.3s ease-in-out; }
+  header .hamburger-menu {
+    display: inline-block;
+    height: 100px;
+    padding: 35px 25px;
+    transition: all 0.3s ease-in-out; }
+    header .hamburger-menu:hover {
+      cursor: pointer; }
+    header .hamburger-menu .menu-item {
+      background: black;
+      display: block;
+      height: 1px;
+      margin: 0 0 8px;
+      transition: all 0.3s ease-in-out;
+      width: 30px; }
+    header .hamburger-menu.open .menu-item {
+      margin: 0 0 3.7px; }
+      header .hamburger-menu.open .menu-item:first-child {
+        transform: rotate(45deg);
+        transform-origin: 10px; }
+      header .hamburger-menu.open .menu-item:nth-child(2) {
+        opacity: 0; }
+      header .hamburger-menu.open .menu-item:nth-child(3) {
+        transform: rotate(-45deg);
+        transform-origin: 8px; }
+
+#intro-div {
+  height: 80vh; }
+  #intro-div img {
+    width: 200px; }
+  #intro-div h1 {
+    margin-top: 50px; }
+  #intro-div p {
+    letter-spacing: 5px; }
+
+#about-div {
+  background: #3D4044;
+  color: white;
+  padding-bottom: 100px; }
+  #about-div h1 {
+    color: white; }
+  #about-div p {
+    color: white;
+    text-transform: uppercase;
+    width: 900px; }
+  @media only screen and (max-width: 1000px) {
+    #about-div p {
+      width: 80%;
+      margin: auto; } }
+
+#explore-div #environment-div img {
+  width: 50px;
+  margin: 0 0 25px; }
+#explore-div #stats-div img {
+  width: 350px; }
+#explore-div #stats-div h2 {
+  margin: 0 0 25px; }
+#explore-div #stats-div p {
+  margin: 0 0 25px; }
+#explore-div #risk-div #risk-icon-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  margin: 25px; }
+  #explore-div #risk-div #risk-icon-container .risk-factors {
+    width: 150px; }
+    #explore-div #risk-div #risk-icon-container .risk-factors img {
+      width: 70px; }
+@media only screen and (max-width: 1000px) {
+  #explore-div #risk-div #risk-icon-container {
+    flex-direction: column;
+    align-items: center; }
+    #explore-div #risk-div #risk-icon-container .risk-factors {
+      margin: 25px; } }
+#explore-div #challenge-div {
+  margin-top: 50px;
+  padding: 50px 100px;
+  background: #febad2;
+  border-radius: 15px;
+  margin-bottom: 100px; }
+@media only screen and (max-width: 1000px) {
+  #explore-div #challenge-div {
+    width: 80%;
+    padding: 5% 0; }
+    #explore-div #challenge-div .challenge-section {
+      width: 80%; } }
+
+#investigate-div {
+  padding-top: 0; }
+  #investigate-div #research-div {
+    text-align: left; }
+    #investigate-div #research-div .research-section {
+      display: inline-block;
+      margin: 25px 0; }
+      #investigate-div #research-div .research-section img {
+        display: inline-block;
+        vertical-align: top;
+        width: 200px;
+        margin-right: 25px; }
+      #investigate-div #research-div .research-section .research-text {
+        display: inline-block;
+        width: 650px;
+        vertical-align: top;
+        margin: 0; }
+  @media only screen and (max-width: 1000px) {
+    #investigate-div #research-div {
+      text-align: center; }
+      #investigate-div #research-div .research-section .research-text {
+        width: 80%;
+        margin: 25px; }
+      #investigate-div #research-div .research-section img {
+        margin-right: 0; } }
+
+#participate-div {
+  text-align: left; }
+  #participate-div h3 {
+    margin-bottom: 0;
+    text-align: center; }
+  #participate-div .recruit-text {
+    text-align: center;
+    width: 900px; }
+  @media only screen and (max-width: 1000px) {
+    #participate-div .recruit-text {
+      width: 80%; } }
+  #participate-div .research-section {
+    display: inline-block;
+    margin: 25px 0; }
+    #participate-div .research-section img {
+      display: inline-block;
+      vertical-align: top;
+      width: 200px;
+      margin-right: 25px; }
+    #participate-div .research-section .research-text {
+      display: inline-block;
+      width: 650px;
+      vertical-align: top;
+      margin: 0; }
+
+@media only screen and (max-width: 1000px) {
+  #participate-div {
+    text-align: center; }
+    #participate-div .research-section .research-text {
+      width: 80%;
+      margin: 25px; }
+    #participate-div .research-section img {
+      margin-right: 0; } }
+#support-sub {
+  padding: 0 0 100px; }
+
+#contact-div {
+  background: #3D4044; }
+  #contact-div h1 {
+    color: white; }
+  #contact-div h3 {
+    color: white; }
+  #contact-div p {
+    color: white; }
+  #contact-div a {
+    color: white; }
+  #contact-div img {
+    width: 20px; }
+  #contact-div #contact-main-div {
+    display: flex;
+    flex-direction: row;
+    margin: 50px; }
+    #contact-div #contact-main-div a {
+      margin: 0 25px; }
+  @media only screen and (max-width: 1000px) {
+    #contact-div #contact-main-div {
+      flex-direction: column; } }
+  #contact-div .references-section {
+    text-align: left; }
+    #contact-div .references-section #references-text {
+      text-align: left;
+      font-size: 10px;
+      letter-spacing: 1px;
+      font-weight: 100;
+      word-break: break-all; }
+    #contact-div .references-section .column2 {
+      column-count: 2; }
+
+/*# sourceMappingURL=style.css.map */

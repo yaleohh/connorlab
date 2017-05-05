@@ -1,0 +1,459 @@
+// Enter the following commands in cmd inside of the portfolio folder
+//sass --watch css:css
+//variables
+$light-gray: #ccc;
+$gray: #777;
+$dark-gray: #3D4044;
+$red: #ee6e73;
+$yellow: #ffd789;
+$pink: #febad2;
+$main-font: "Open Sans", Helvetica, sans-serif;
+$x-small-font: 10px;
+$small-font: 14px;
+$medium-font: 18px;
+$large-font: 25px;
+$x-large-font: 35px;
+$normal-weight: 300;
+$heavy-weight: bold;
+$large-space: 100px;
+$medium-space: 50px;
+$small-space: 25px;
+$regular-width: 900px;
+$small-width: 80%;
+
+body {
+    font-family: $main-font;
+    color: black;
+    font-weight: $normal-weight;
+    font-size: $small-font;
+    letter-spacing: 5px;
+    text-align: center;
+    min-width: 450px;
+    margin: 0;
+}
+
+h1 {
+    font-family: $main-font;
+    font-size: $x-large-font;
+    letter-spacing: 15px;
+    font-weight: $heavy-weight;
+    color: $dark-gray;
+    text-transform: uppercase;
+    margin: 0 0 $small-space;
+}
+
+h2 {
+    margin: 0 0 $small-space;
+    font-family: $main-font;
+    font-size: $large-font;
+    letter-spacing: 5px;
+    font-weight: $heavy-weight;
+    color: $dark-gray;
+    text-transform: uppercase;
+}
+
+h3 {
+    letter-spacing: 5px;
+    font-size: $medium-font;
+    font-weight: $normal-weight;
+    margin-top: 0;
+    color: $dark-gray;
+    width: $regular-width;
+}
+@media only screen and (max-width: 1000px) {
+    h3 {
+        width: $small-width;
+    }
+}
+
+h4 {
+    letter-spacing: 3px;
+    font-size: $small-font;
+    margin-top: 0;
+    color: $dark-gray;
+    text-transform: uppercase;
+    font-weight: $heavy-weight;
+}
+
+a {
+    color: $dark-gray;
+    display: inline-block;
+    text-decoration: none;
+}
+
+a:hover {
+    color: $pink;
+}
+
+p {
+    letter-spacing: 3px;
+    font-size: $small-font;
+    margin-top: 0;
+    color: $dark-gray;
+}
+
+.main-div {
+    min-width: 300px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: $large-space 0 0;
+}
+
+.sub-div {
+    min-width: 300px;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    padding: $medium-space 0 0;
+    width: $regular-width;
+}
+@media only screen and (max-width: 1000px) {
+    .sub-div {
+        width: $small-width;
+    }
+}
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ Mobile Nav @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// basic header styles
+
+header {
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    text-align: left;
+    background: white;
+    // nav styles
+    .mobile-nav-wrap {
+        @media (min-width: 768px) {
+            /* display: none; */
+        }
+    }
+    // styling of dropdown menu
+    .mobile-header-nav {
+        background-color: white;
+        display: none; // hide until menu is clicked
+        list-style: none;
+        // replace with %styled-list
+        margin: 0; // replace with %styled-list
+        padding: 0; // replace with %styled-list
+        position: absolute;
+        top: 100px; // if nav sliding in below header
+        width: 100%;
+        height: 100vh;
+
+        li {
+            a {
+                color: black;
+                display: block;
+                padding: 25px 0;
+                text-align: center;
+                text-decoration: none;
+                transition: all 0.3s ease-in-out;
+            }
+        }
+    }
+    // styling of hamburger menu
+    .hamburger-menu {
+        display: inline-block;
+        height: 100px;
+        padding: 35px 25px;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        .menu-item {
+            background: black;
+            display: block;
+            height: 1px;
+            margin: 0 0 8px;
+            transition: all 0.3s ease-in-out;
+            width: 30px;
+        }
+
+        &.open {
+            .menu-item {
+                margin: 0 0 3.7px;
+
+                &:first-child {
+                    transform: rotate(45deg);
+                    transform-origin: 10px;
+                }
+
+                &:nth-child(2) {
+                    opacity: 0;
+                }
+
+                &:nth-child(3) {
+                    transform: rotate(-45deg);
+                    transform-origin: 8px;
+                }
+            }
+        }
+    }
+}
+
+#intro-div {
+    height: 80vh;
+
+    img {
+        width: 200px;
+    }
+
+    h1 {
+        margin-top: $medium-space;
+    }
+
+    p {
+        letter-spacing: 5px;
+    }
+}
+
+#about-div {
+    background: #3D4044;
+    color: white;
+    padding-bottom: $large-space;
+
+    h1 {
+        color: white;
+    }
+
+    p {
+        color: white;
+        text-transform: uppercase;
+        width: $regular-width;
+    }
+    @media only screen and (max-width: 1000px) {
+        p {
+            width: $small-width;
+            margin: auto;
+        }
+    }
+}
+
+#explore-div {
+    #environment-div {
+        img {
+            width: 50px;
+            margin: 0 0 $small-space;
+        }
+    }
+
+    #stats-div {
+        img {
+            width: 350px;
+        }
+
+        h2 {
+            margin: 0 0 $small-space;
+        }
+
+        p {
+            margin: 0 0 $small-space;
+        }
+    }
+
+    #risk-div {
+        #risk-icon-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            text-align: center;
+            margin: $small-space;
+
+            .risk-factors {
+                width: 150px;
+
+                img {
+                    width: 70px;
+                }
+            }
+        }
+        @media only screen and (max-width: 1000px) {
+            #risk-icon-container {
+                flex-direction: column;
+                align-items: center;
+
+                .risk-factors {
+                    margin: $small-space;
+                }
+            }
+        }
+    }
+
+    #challenge-div {
+        margin-top: $medium-space;
+        padding: $medium-space $large-space;
+        background: $pink;
+        border-radius: 15px;
+        margin-bottom: $large-space;
+    }
+    @media only screen and (max-width: 1000px) {
+        #challenge-div {
+            width: $small-width;
+            padding: 5% 0;
+
+            .challenge-section {
+                width: $small-width;
+            }
+        }
+    }
+}
+
+#investigate-div {
+    padding-top: 0;
+
+    #research-div {
+        text-align: left;
+
+        .research-section {
+            display: inline-block;
+            margin: $small-space 0;
+
+            img {
+                display: inline-block;
+                vertical-align: top;
+                width: 200px;
+                margin-right: $small-space;
+            }
+
+            .research-text {
+                display: inline-block;
+                width: 650px;
+                vertical-align: top;
+                margin: 0;
+            }
+        }
+    }
+    @media only screen and (max-width: 1000px) {
+        #research-div {
+            text-align: center;
+
+            .research-section {
+                .research-text {
+                    width: $small-width;
+                    margin: $small-space;
+                }
+
+                img {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
+
+#participate-div {
+    text-align: left;
+
+    h3 {
+        margin-bottom: 0;
+        text-align: center;
+    }
+
+    .recruit-text {
+        text-align: center;
+        width: $regular-width;
+    }
+    @media only screen and (max-width: 1000px) {
+        .recruit-text {
+            width: $small-width;
+        }
+    }
+
+    .research-section {
+        display: inline-block;
+        margin: $small-space 0;
+
+        img {
+            display: inline-block;
+            vertical-align: top;
+            width: 200px;
+            margin-right: $small-space;
+        }
+
+        .research-text {
+            display: inline-block;
+            width: 650px;
+            vertical-align: top;
+            margin: 0;
+        }
+    }
+}
+@media only screen and (max-width: 1000px) {
+    #participate-div {
+        text-align: center;
+
+        .research-section {
+            .research-text {
+                width: $small-width;
+                margin: $small-space;
+            }
+
+            img {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+#support-sub {
+    padding: 0 0 $large-space;
+}
+
+#contact-div {
+    background: $dark-gray;
+
+    h1 {
+        color: white;
+    }
+
+    h3 {
+        color: white;
+    }
+
+    p {
+        color: white;
+    }
+
+    a {
+        color: white;
+    }
+
+    img {
+        width: 20px;
+    }
+
+    #contact-main-div {
+        display: flex;
+        flex-direction: row;
+        margin: $medium-space;
+
+        a {
+            margin: 0 $small-space;
+        }
+    }
+    @media only screen and (max-width: 1000px) {
+        #contact-main-div {
+            flex-direction: column;
+        }
+    }
+
+    .references-section {
+        text-align: left;
+
+        #references-text {
+            text-align: left;
+            font-size: $x-small-font;
+            letter-spacing: 1px;
+            font-weight: 100;
+            word-break: break-all;
+        }
+
+        .column2 {
+            column-count: 2;
+        }
+    }
+}
